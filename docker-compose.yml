@@ -1,0 +1,23 @@
+# PostgreSQL 16 para el taller. Arrancar:  docker compose up -d
+# Parar conservando los datos:  docker compose down
+# Parar y BORRAR los datos:     docker compose down -v
+services:
+  db:
+    image: postgres:16
+    container_name: taller-db
+    environment:
+      POSTGRES_DB: ${DB_NAME:-taller}
+      POSTGRES_USER: ${DB_USER:-taller}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-taller}
+    ports:
+      - "${DB_PORT:-5432}:5432"       # si el 5432 está ocupado:  DB_PORT=5433 docker compose up -d
+    volumes:
+      - datos:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-taller}"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  datos:

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ad.taller.Actividad3Test" time="0.001" tests="2" errors="0" skipped="2" failures="0">
+  <properties/>
+  <testcase name="anularInexistente" classname="ad.taller.Actividad3Test" time="0.0">
+    <skipped message="actividad 3: quita esta línea para empezar"/>
+  </testcase>
+  <testcase name="anularDevuelvePlazas" classname="ad.taller.Actividad3Test" time="0.0">
+    <skipped message="actividad 3: quita esta línea para empezar"/>
+  </testcase>
+</testsuite>
